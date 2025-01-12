@@ -24,18 +24,18 @@ async function displayTitle() {
 async function mainMenu() {
   await displayTitle();
   if (!userName) {
-    userName = await askQuestion(chalk.blue('Please enter your name: '));
-    console.log(chalk.green('\nSaved successfully!\n'));
+    userName = await askQuestion('Please enter your name: ');
+    console.log(chalk.green('Saved successfully!\n'));
   }
   
-  console.log(chalk.white(`Hello, ${chalk.bold.yellow(userName)}! Choose an option:\n`));
-  console.log(chalk.blue('1.') + chalk.white(' Create Post'));
-  console.log(chalk.blue('2.') + chalk.white(' View Posts'));
-  console.log(chalk.blue('3.') + chalk.white(' Update Post'));
-  console.log(chalk.blue('4.') + chalk.white(' Delete Post'));
-  console.log(chalk.blue('5.') + chalk.white(' Exit\n'));
-
-  const choice = await askQuestion(chalk.blue("select an option from 1-5 "))
+  console.log(`Hello, ${chalk.bold(userName)}! Choose an option:`);
+  console.log('1. Create Post');
+  console.log('2. View Posts');
+  console.log('3. Update Post');
+  console.log('4. Delete Post');
+  console.log('5. Exit');
+  
+  const choice = await askQuestion('Select an option (1-5): ');
   
   if (choice === '1') {
     await createPost(userName);
