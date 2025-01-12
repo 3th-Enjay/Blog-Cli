@@ -1,0 +1,16 @@
+{
+  "name": "Blog-Cli",
+  "version": "1.0.0",
+  "description": "",
+ "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Nelson Nwatu",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "gradient-string": "^3.0.0"
+  }
+}
